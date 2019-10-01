@@ -1,0 +1,38 @@
+<div class="row mt-5">
+    <div *ngIf="users.length!=0;else noUserFound" class="col-12">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th> img</th>
+                    <th> full name </th>
+                    <th> age </th>
+                    <th> balance</th>
+                    <th>
+                        <button routerLink="/create-user" class="btn btn-primary">add user </button>
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let item of users">
+                    <td> 
+                        <img [src]="item.imageUrl" alt="no image" height="30"   width="30">    
+                    </td>
+                    <td> {{item.firstName +" "+item.lastname}} </td>
+                    <td> {{item.age}} </td>
+                    <td> {{item.balance | currency }} </td>
+                    <td>
+                        <button (click)="editUser(item)" class="btn btn-info mr-1">edit</button>
+                        <button (click)="_deleteUser(item)" class="btn btn-danger">delete</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <ng-template #noUserFound>
+        <div class="col-12">
+            <div class="alert alert-info">
+                <strong>No user found !</strong> <a routerLink="/create-user" class="alert-link"> add user here . </a>
+            </div>
+        </div>
+    </ng-template>
+</div>

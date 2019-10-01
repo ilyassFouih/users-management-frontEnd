@@ -1,0 +1,6 @@
+<div  *ngIf="errorService.alertState" class="alert"  [ngClass]="errorService.alertType==1?'alert-success':'alert-danger'" role="alert">
+  <h4 class="alert-heading"> 
+    {{errorService.alertMessage}}
+  </h4>
+  <p class="mb-0"></p>
+</div>

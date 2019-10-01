@@ -1,0 +1,23 @@
+<div class="row mt-5">
+    <div class="col-12">
+  
+      <div class="form-group">
+  
+        <label for="">first Name</label>
+        <input type="text" [(ngModel)]="editUserDto.firstName" class="form-control" placeholder="enter your first name ..." >
+  
+        <label for="">last name</label>
+        <input type="text" [(ngModel)]="editUserDto.lastname" class="form-control" placeholder="enter your last name ..." >
+  
+        <label for="">age</label>
+        <input type="number" [(ngModel)]="editUserDto.age" class="form-control" placeholder="enter your age ..." >
+  
+        <label for="">balance</label>
+        <input type="nulber" [(ngModel)]="editUserDto.balance" class="form-control" placeholder="enter your balance ..." >
+  
+        <button (click)="_editUserDto()" class="btn btn-info btn-block mt-2">edit user </button>
+  
+      </div>
+    </div>
+  </div>
+  

@@ -1,0 +1,22 @@
+<div class="row mt-5">
+  <div class="col-12">
+
+    <div class="form-group">
+
+      <label for="">first Name</label>
+      <input type="text" [(ngModel)]="user.firstName" class="form-control" placeholder="enter your first name ..." >
+
+      <label for="">last name</label>
+      <input type="text" [(ngModel)]="user.lastname" class="form-control" placeholder="enter your last name ..." >
+
+      <label for="">age</label>
+      <input type="number" [(ngModel)]="user.age" class="form-control" placeholder="enter your age ..." >
+
+      <label for="">balance</label>
+      <input type="nulber" [(ngModel)]="user.balance" class="form-control" placeholder="enter your balance ..." >
+
+      <button (click)="_createUser()" class="btn btn-success btn-block mt-2">create user </button>
+
+    </div>
+  </div>
+</div>
